@@ -15,15 +15,13 @@ permissions:
 jobs:
   DeployApp:
     runs-on: ubuntu-latest
-    env:
-      AWS_GITHUB_ROLE: ${{ secrets.AWS_GITHUB_ROLE }}
     steps:
       - name: Git clone the repository
         uses: actions/checkout@v3
       - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v3
         with:
-          role-to-assume: $AWS_GITHUB_ROLE
+          role-to-assume: ${{ secrets.AWS_GITHUB_ROLE }}
           role-duration-seconds: 14390 #adjust as needed for your build time
           aws-region: eu-west-2
       - name: Deploy app

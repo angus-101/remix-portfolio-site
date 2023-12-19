@@ -5,7 +5,7 @@ export default {
   config(_input) {
     return {
       name: "remix-portfolio-site",
-      region: "us-east-1",
+      region: "eu-west-2",
     };
   },
   stacks(app) {
@@ -13,6 +13,8 @@ export default {
       const site = new RemixSite(stack, "site");
       stack.addOutputs({
         url: site.url,
+        customDomain:
+          stack.stage === "prod" ? "angusmcc.co.uk" : `${stack.stage}.angusmcc.co.uk`,
       });
     });
   },

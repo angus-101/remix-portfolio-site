@@ -5,7 +5,7 @@ export default {
   config(_input) {
     return {
       name: "remix-portfolio-site",
-      region: "eu-west-2",
+      region: "us-east-1",
     };
   },
   stacks(app) {

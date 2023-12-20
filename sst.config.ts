@@ -17,7 +17,7 @@ export default {
         customDomain: {
           isExternalDomain: true,
           domainName: stack.stage === "prod" ? "angusmcc.co.uk" : `${stack.stage}.angusmcc.co.uk`,
-          domainAlias: stack.stage === "prod" ? "www.angusmcc.co.uk" : `www.${stack.stage}.angusmcc.co.uk`,
+          // domainAlias: stack.stage === "prod" ? "www.angusmcc.co.uk" : `www.${stack.stage}.angusmcc.co.uk`,
           cdk: {
             certificate: Certificate.fromCertificateArn(stack, "MyCert", process.env.CERTIFICATE_ARN),
           },

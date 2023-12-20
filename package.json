@@ -8,7 +8,7 @@
     "dev": "sst bind remix dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "remix-serve ./build/index.js",
-    "typecheck": "tsc",
+    "typecheck": "tsc --noEmit",
     "sst:deploy": "sst deploy",
     "sst:dev": "sst dev",
     "lint:js": "eslint --cache --cache-location ./node_modules/.cache/eslint app"

@@ -8,6 +8,7 @@ import {
   Scripts,
   ScrollRestoration,
 } from "@remix-run/react";
+import stylesheet from "./tailwind.css";
 
 export const links: LinksFunction = () => [
   {
@@ -20,6 +21,7 @@ export const links: LinksFunction = () => [
     rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png"
   },
   { rel: 'manifest', href: '/site.webmanifest' },
+  { rel: "stylesheet", href: stylesheet },
   ...(cssBundleHref ? [{ rel: "stylesheet", href: cssBundleHref }] : []),
 ];
 

@@ -3,7 +3,7 @@ import { RemixSite } from "sst/constructs";
 import { Certificate } from "aws-cdk-lib/aws-certificatemanager";
 
 export default {
-  config() {
+  config(_input) {
     return {
       name: "remix-portfolio-site",
       region: "eu-west-2",

@@ -1,7 +1,6 @@
 import type { SSTConfig } from "sst";
 import { RemixSite } from "sst/constructs";
 import { Certificate } from "aws-cdk-lib/aws-certificatemanager";
-import invariant from "tiny-invariant";
 
 export default {
   config(_input) {

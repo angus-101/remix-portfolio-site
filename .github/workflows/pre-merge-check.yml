@@ -24,5 +24,7 @@ jobs:
           role-duration-seconds: 14390 #adjust as needed for your build time
           aws-region: eu-west-2
       - name: Deploy app
+        env:
+          CERTIFICATE_ARN: ${{ secrets.CERTIFICATE_ARN }}
         run: |
           npm i && npx sst deploy --stage dev

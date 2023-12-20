@@ -51,11 +51,8 @@ jobs:
       - name: Download deps
         run: npm install
 
-      - name: Build app
-        run: npm run build
-
       - name: Type check
-        run: npm run typecheck
+        run: npm run build && npm run typecheck
 
   DeployAppDev:
     name: Deploy to dev

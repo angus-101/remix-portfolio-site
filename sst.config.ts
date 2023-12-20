@@ -12,7 +12,6 @@ export default {
   },
   stacks(app) {
     app.stack(function Site({ stack }) {
-      invariant(process.env.CERTIFICATE_ARN, "CERTIFICATE_ARN is undefined")
       const site = new RemixSite(stack, "site", {
         customDomain: {
           isExternalDomain: true,

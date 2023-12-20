@@ -56,6 +56,7 @@ jobs:
 
   DeployAppDev:
     name: Deploy to dev
+    needs: [ lint-typescript, typecheck ]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo

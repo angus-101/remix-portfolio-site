@@ -52,7 +52,7 @@ jobs:
         run: npm install
 
       - name: Type check
-        run: npm run build && npm run typecheck
+        run: sst build && npm run typecheck
 
   DeployAppDev:
     name: Deploy to dev

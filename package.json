@@ -10,7 +10,8 @@
     "start": "remix-serve ./build/index.js",
     "typecheck": "tsc",
     "sst:deploy": "sst deploy",
-    "sst:dev": "sst dev"
+    "sst:dev": "sst dev",
+    "lint:js": "eslint --cache --cache-location ./node_modules/.cache/eslint app"
   },
   "dependencies": {
     "@remix-run/css-bundle": "^2.4.0",

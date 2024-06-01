@@ -10,6 +10,7 @@
     "start": "remix-serve ./build/index.js",
     "typecheck": "tsc --noEmit",
     "sst:deploy": "sst deploy",
+    "sst:deploy:dev": "sst deploy --stage dev",
     "sst:dev": "sst dev",
     "lint:js": "eslint --cache --cache-location ./node_modules/.cache/eslint app"
   },

@@ -11,6 +11,11 @@
     "strict": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./app/*"]

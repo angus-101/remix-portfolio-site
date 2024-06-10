@@ -1,0 +1,12 @@
+.header {
+  margin-bottom: 20px;
+  color: #FF0000;
+  font-family: "Garamond";
+  display: flex;
+}
+
+.header--img {
+  width: 50px;
+}
+
+/*# sourceMappingURL=index.css.map */

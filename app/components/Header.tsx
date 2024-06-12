@@ -9,7 +9,7 @@ export const Header = ({ className, imgClassName }: HeaderProps) => (
     <div className={className}>
         <img src={logoImage} className={imgClassName}/>
         <div>
-            welcome to my site
+            welcome to my site hello
         </div>
     </div>
 )

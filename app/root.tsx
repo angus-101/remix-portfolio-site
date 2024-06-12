@@ -36,7 +36,18 @@ export default function App() {
         <Links />
       </head>
       <body>
-        <Header className="header" imgClassName="header--img"/>
+        <Header
+          headerLinks={[
+            {
+              linkText: 'About',
+              url: 'https://google.com'
+            },
+            {
+              linkText: 'Contact',
+              url: 'https://reddit.com'
+            }
+          ]}
+        />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

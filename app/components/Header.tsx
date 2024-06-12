@@ -1,15 +1,27 @@
 import logoImage from "~/images/logoImage.png"
 
-interface HeaderProps {
-    className?: string
-    imgClassName?: string
+interface HeaderLink {
+    linkText: string
+    url: string
 }
 
-export const Header = ({ className, imgClassName }: HeaderProps) => (
-    <div className={className}>
-        <img src={logoImage} className={imgClassName}/>
-        <div>
-            welcome to my site hello
+interface HeaderProps {
+    headerLinks: HeaderLink[]
+}
+
+export const Header = ({ headerLinks }: HeaderProps) => (
+    <div className='header'>
+        <img src={logoImage} className='header--img' />
+        <div className="header--link-container">
+            {headerLinks.map((headerLink) => (
+                <a
+                    href={headerLink.url}
+                    key={`header-link-${headerLinks.indexOf(headerLink)}`}
+                    className="header--link"
+                >
+                    {headerLink.linkText}
+                </a>
+            ))}
         </div>
     </div>
 )

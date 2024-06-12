@@ -12,7 +12,7 @@
 }
 .header--link-container {
   flex-direction: column;
-  align-items: flex-end;
+  align-items: right;
 }
 
 /*# sourceMappingURL=index.css.map */

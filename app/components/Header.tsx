@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react"
 import clsx from "clsx"
 import logo from "~/images/logo.png"
 
@@ -22,13 +23,13 @@ export const Header = ({ headerLinks }: HeaderProps) => (
         </a>
         <div className='header--link-container'>
             {headerLinks.map((headerLink) => (
-                <a
-                    href={headerLink.url}
+                <Link
+                    to={headerLink.url}
                     key={`header-link-${headerLinks.indexOf(headerLink)}`}
                     className={clsx('header--link', headerLink.selected && 'header--link-selected')}
                 >
                     {headerLink.linkText}
-                </a>
+                </Link>
             ))}
         </div>
     </div>

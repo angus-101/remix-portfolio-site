@@ -1,0 +1,35 @@
+.header {
+    font-family: "consolas";
+    display: flex;
+
+    &--img {
+        height: 50px;
+        vertical-align: bottom;
+    }
+
+    &--link {
+        width: 90px;
+        padding: 15px 0px;
+        margin: 0px 5px;
+        text-align: center;
+        align-self: center;
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        color: black;
+
+        &:hover {
+            background-color: #fafafa;
+            border-bottom: 2px solid black;
+        }
+
+        &-selected {
+            border-bottom: 2px solid black;
+        }
+
+        &-container {
+            justify-content: flex-end;
+            margin-left: auto;
+            display: flex;
+        }
+    }
+}

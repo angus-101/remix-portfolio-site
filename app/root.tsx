@@ -7,8 +7,10 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  useMatches,
 } from "@remix-run/react";
-import stylesheet from "./tailwind.css";
+import stylesheet from "./styles/index.css";
+import { Header } from "./components/Header";
 
 export const links: LinksFunction = () => [
   {
@@ -26,6 +28,25 @@ export const links: LinksFunction = () => [
 ];
 
 export default function App() {
+  const matches = useMatches();
+  const childRoute = matches[matches.length - 1]
+  const currentPath = childRoute.pathname
+
+  const headerLinks = [
+    {
+      linkText: 'home',
+      url: '/'
+    },
+    {
+      linkText: 'about',
+      url: '/about'
+    },
+    {
+      linkText: 'contact',
+      url: '/contact'
+    },
+  ]
+
   return (
     <html lang="en">
       <head>
@@ -35,6 +56,15 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <Header
+          headerLinks={headerLinks.map((headerLink) => (
+            {
+              linkText: headerLink.linkText,
+              url: headerLink.url,
+              selected: currentPath === headerLink.url
+            }
+          ))}
+        />
         <Outlet />
         <ScrollRestoration />
         <Scripts />

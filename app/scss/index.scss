@@ -3,13 +3,19 @@
     display: flex;
 
     &--img {
-        height: 50px;
+        height: 15px;
         vertical-align: bottom;
+        align-self: center;
+
+        &-container {
+            display: flex;
+            padding: 0px 10px;
+        }
     }
 
     &--link {
         width: 90px;
-        padding: 15px 0px;
+        padding: 10px 0px;
         margin: 0px 5px;
         text-align: center;
         align-self: center;

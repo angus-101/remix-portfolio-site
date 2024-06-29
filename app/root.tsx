@@ -39,12 +39,16 @@ export default function App() {
         <Header
           headerLinks={[
             {
+              linkText: 'home',
+              url: '/'
+            },
+            {
               linkText: 'about',
-              url: 'https://google.com'
+              url: '/about'
             },
             {
               linkText: 'contact',
-              url: 'https://reddit.com'
+              url: '/contact'
             }
           ]}
         />

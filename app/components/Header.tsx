@@ -11,7 +11,9 @@ interface HeaderProps {
 
 export const Header = ({ headerLinks }: HeaderProps) => (
     <div className='header'>
-        <img src={logoImage} className='header--img' />
+        <a href='/'>
+            <img src={logoImage} className='header--img' />
+        </a>
         <div className='header--link-container'>
             {headerLinks.map((headerLink) => (
                 <a

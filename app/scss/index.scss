@@ -1,10 +1,10 @@
 .header {
-    color: #FF0000;
     font-family: "Garamond";
     display: flex;
 
     &--img {
         width: 50px;
+        vertical-align: bottom;
     }
 
     &--link {
@@ -13,6 +13,7 @@
         align-self: center;
         text-decoration: none;
         border-bottom: 2px solid transparent;
+        color: black;
 
         &:hover {
             border-bottom: 2px solid black;

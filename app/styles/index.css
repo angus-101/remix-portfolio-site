@@ -1,10 +1,10 @@
 .header {
-  color: #FF0000;
   font-family: "Garamond";
   display: flex;
 }
 .header--img {
   width: 50px;
+  vertical-align: bottom;
 }
 .header--link {
   padding: 15px;
@@ -12,6 +12,7 @@
   align-self: center;
   text-decoration: none;
   border-bottom: 2px solid transparent;
+  color: black;
 }
 .header--link:hover {
   border-bottom: 2px solid black;

@@ -8,7 +8,9 @@
     }
 
     &--link {
-        padding: 15px;
+        width: 90px;
+        padding: 15px 0px;
+        margin: 0px 5px;
         text-align: center;
         align-self: center;
         text-decoration: none;
@@ -16,6 +18,11 @@
         color: black;
 
         &:hover {
+            background-color: #fafafa;
+            border-bottom: 2px solid black;
+        }
+
+        &-selected {
             border-bottom: 2px solid black;
         }
 

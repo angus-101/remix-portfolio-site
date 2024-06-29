@@ -1,8 +1,10 @@
+import clsx from "clsx"
 import logo from "~/images/logo.png"
 
 interface HeaderLink {
     linkText: string
     url: string
+    selected: boolean
 }
 
 interface HeaderProps {
@@ -23,7 +25,7 @@ export const Header = ({ headerLinks }: HeaderProps) => (
                 <a
                     href={headerLink.url}
                     key={`header-link-${headerLinks.indexOf(headerLink)}`}
-                    className='header--link'
+                    className={clsx('header--link', headerLink.selected && 'header--link-selected')}
                 >
                     {headerLink.linkText}
                 </a>

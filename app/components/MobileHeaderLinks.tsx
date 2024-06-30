@@ -6,7 +6,7 @@ import { useEffect } from "react";
 export const MobileHeaderLinks = ({ headerLinks }: HeaderProps) => {
     const toggleMenu = () => {
         const links = document.getElementsByClassName('header--mobile-link')
-        for (let link of links) {
+        for (const link of links) {
             link.classList.toggle('header--mobile-link-container-show');
         }
     }
@@ -16,7 +16,7 @@ export const MobileHeaderLinks = ({ headerLinks }: HeaderProps) => {
         window.onclick = event => {
             if (!document.getElementById('menu-button')!.contains(event.target as Node)) {
                 const links = document.getElementsByClassName('header--mobile-link')
-                for (let link of links) {
+                for (const link of links) {
                     if (link.classList.contains('header--mobile-link-container-show')) {
                         link.classList.remove('header--mobile-link-container-show');
                     }

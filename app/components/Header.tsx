@@ -1,6 +1,5 @@
 import { Link } from "@remix-run/react"
 import logo from "~/images/logo.png"
-import { HeaderLinks } from "./HeaderLinks"
 import { MobileHeaderLinks } from "./MobileHeaderLinks"
 
 interface HeaderLink {

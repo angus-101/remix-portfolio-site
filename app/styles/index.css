@@ -1,6 +1,8 @@
 .header {
   font-family: "consolas";
   display: flex;
+  flex-wrap: wrap;
+  position: relative;
 }
 .header--img {
   height: 15px;
@@ -18,20 +20,48 @@
   text-align: center;
   align-self: center;
   text-decoration: none;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid transparent;
   color: black;
 }
 .header--link:hover {
   background-color: #fafafa;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
 }
 .header--link-selected {
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
 }
 .header--link-container {
   justify-content: flex-end;
   margin-left: auto;
   display: flex;
+}
+.header--mobile-link {
+  display: none;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+.header--mobile-link:hover {
+  background-color: #fafafa;
+}
+.header--mobile-link-selected {
+  background-color: #fafafa;
+}
+.header--mobile-link-container {
+  position: absolute;
+  display: none;
+  width: 100%;
+  display: flex;
+  background-color: white;
+  flex-direction: column;
+  top: 100%;
+}
+.header--mobile-link-container-show {
+  display: block;
+}
+.header--mobile-menu-button {
+  justify-content: flex-end;
+  margin-left: auto;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,6 +1,6 @@
 import { Link } from "@remix-run/react"
-import clsx from "clsx"
 import logo from "~/images/logo.png"
+import { MobileHeaderLinks } from "./MobileHeaderLinks"
 
 interface HeaderLink {
     linkText: string
@@ -8,7 +8,7 @@ interface HeaderLink {
     selected: boolean
 }
 
-interface HeaderProps {
+export interface HeaderProps {
     headerLinks: HeaderLink[]
 }
 
@@ -21,16 +21,7 @@ export const Header = ({ headerLinks }: HeaderProps) => (
                 alt='The logo of the website'
             />
         </Link>
-        <div className='header--link-container'>
-            {headerLinks.map((headerLink) => (
-                <Link
-                    to={headerLink.url}
-                    key={`header-link-${headerLinks.indexOf(headerLink)}`}
-                    className={clsx('header--link', headerLink.selected && 'header--link-selected')}
-                >
-                    {headerLink.linkText}
-                </Link>
-            ))}
-        </div>
+        {/* <HeaderLinks headerLinks={headerLinks} /> */}
+        <MobileHeaderLinks headerLinks={headerLinks} />
     </div>
 )

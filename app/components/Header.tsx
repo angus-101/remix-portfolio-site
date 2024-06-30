@@ -21,7 +21,7 @@ export const Header = ({ headerLinks }: HeaderProps) => (
                 alt='The logo of the website'
             />
         </Link>
-        <div className='header--link-container'>
+        <nav className='header--link-container'>
             {headerLinks.map((headerLink) => (
                 <Link
                     to={headerLink.url}
@@ -31,6 +31,6 @@ export const Header = ({ headerLinks }: HeaderProps) => (
                     {headerLink.linkText}
                 </Link>
             ))}
-        </div>
+        </nav>
     </div>
 )

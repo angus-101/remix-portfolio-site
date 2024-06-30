@@ -1,6 +1,7 @@
 import { Link } from "@remix-run/react"
 import logo from "~/images/logo.png"
 import { HeaderLinks } from "./HeaderLinks"
+import { MobileHeaderLinks } from "./MobileHeaderLinks"
 
 interface HeaderLink {
     linkText: string
@@ -8,7 +9,7 @@ interface HeaderLink {
     selected: boolean
 }
 
-interface HeaderProps {
+export interface HeaderProps {
     headerLinks: HeaderLink[]
 }
 
@@ -21,6 +22,7 @@ export const Header = ({ headerLinks }: HeaderProps) => (
                 alt='The logo of the website'
             />
         </Link>
-        <HeaderLinks headerLinks={headerLinks} />
+        {/* <HeaderLinks headerLinks={headerLinks} /> */}
+        <MobileHeaderLinks headerLinks={headerLinks} />
     </div>
 )

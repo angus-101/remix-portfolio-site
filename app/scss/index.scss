@@ -1,6 +1,8 @@
 .header {
     font-family: "consolas";
     display: flex;
+    flex-wrap: wrap;
+    position: relative;
 
     &--img {
         height: 15px;
@@ -37,5 +39,39 @@
             margin-left: auto;
             display: flex;
         }
+    }
+
+    &--mobile-link {
+        display: none;
+        text-decoration: none;
+        color: black;
+        padding: 10px;
+
+        &:hover {
+            background-color: #fafafa;
+        }
+
+        &-selected {
+            background-color: #fafafa;
+        }
+
+        &-container {
+            position: absolute;
+            display: none;
+            width: 100%;
+            display: flex;
+            background-color: white;
+            flex-direction: column;
+            top: 100%;
+
+            &-show {
+                display: block;
+            }
+        }
+    }
+
+    &--mobile-menu-button {
+        justify-content: flex-end;
+        margin-left: auto;
     }
 }

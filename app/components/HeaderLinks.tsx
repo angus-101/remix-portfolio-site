@@ -1,15 +1,6 @@
 import { Link } from "@remix-run/react";
 import clsx from "clsx";
-
-interface HeaderLink {
-    linkText: string
-    url: string
-    selected: boolean
-}
-
-interface HeaderProps {
-    headerLinks: HeaderLink[]
-}
+import { HeaderProps } from "./Header";
 
 export const HeaderLinks = ({ headerLinks }: HeaderProps) => (
     <nav className='header--link-container'>

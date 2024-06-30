@@ -20,16 +20,16 @@
         text-align: center;
         align-self: center;
         text-decoration: none;
-        border-bottom: 2px solid transparent;
+        border-bottom: 1px solid transparent;
         color: black;
 
         &:hover {
             background-color: #fafafa;
-            border-bottom: 2px solid black;
+            border-bottom: 1px solid black;
         }
 
         &-selected {
-            border-bottom: 2px solid black;
+            border-bottom: 1px solid black;
         }
 
         &-container {
